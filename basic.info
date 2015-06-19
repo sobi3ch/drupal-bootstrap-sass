@@ -1,4 +1,4 @@
-name =  My theme
+name =  #NAME#
 description = A Bootstrap Sub-theme.
 core = 7.x
 base theme = bootstrap

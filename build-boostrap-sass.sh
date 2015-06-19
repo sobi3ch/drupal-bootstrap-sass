@@ -30,7 +30,8 @@ cd $MACHINENAME
 echo "Creating $MACHINENAME.info file.."
 rm bootstrap_subtheme.info.starterkit 
 cp $BBS_DIR/basic.info $MACHINENAME.info
-# mv bootstrap_subtheme.info.starterkit $MACHINENAME.info
+sed -i.bak "s/#NAME#/$HUMANNAME/g" $MACHINENAME.info
+rm $MACHINENAME.info.bak
 
 # Create necessary dirs
 echo "Creating necessary directories.."
@@ -78,19 +79,23 @@ mv -v assets/sass/_bootstrap.scss assets/sass/style.scss
 
 echo "Replace 1 assets/sass/style.scss .."
 sed -i.bak "s:bootstrap/:../../bootstrap/stylesheets/bootstrap/:g" assets/sass/style.scss
+rm assets/sass/style.scss.bak
 
 echo "Replace 2 assets/sass/style.scss .."
 sed -i.bak 's&@import "../../bootstrap/stylesheets/bootstrap/variables";&@import "variables";&g' assets/sass/style.scss
+rm assets/sass/style.scss.bak
 
 # Prepare grunt package file
 echo "Prepare grunt package file.."
 cp $BBS_DIR/grunt.package.json package.json
 sed -i.bak "s/#NAME#/$HUMANNAME/g" package.json
+rm package.json.bak
 
 # Prepapre config.rb for COMPASS
 echo "Prepapre config.rb for COMPASS.."
 cp $BBS_DIR/compass.config.rb config.rb
 sed -i.bak "s/#NAME#/$MACHINENAME/g" config.rb
+rm config.rb.bak
 
 # Prepare gruntfile.JS
 echo "Prepare gruntfile.JS .."
