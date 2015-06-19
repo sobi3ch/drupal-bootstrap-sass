@@ -47,7 +47,6 @@ echo "Getting latest bootstrap-sass version.."
 BOOTSTRAP_SASS_LATEST_VERSION=$($BBS_DIR/get-tag.awk https://github.com/twbs/bootstrap-sass)
 
 # Build url for bootstrap-sass lastest srouce code
-#https://github.com/twbs/bootstrap-sass/archive/v3.3.5.tar.gz
 BOOTSTRAP_SASS_URL=https://github.com/twbs/bootstrap-sass/archive/$BOOTSTRAP_SASS_LATEST_VERSION.tar.gz
 
 # Download bootstrap-sass source code
@@ -70,7 +69,38 @@ done
 echo "Deleting temp files.."
 rm -rf $UNPACK_DIR_NAME $TARGZ_NAME
 
+# Copy base .scss files
+echo "Coping basic .scss files.."
+cp -v bootstrap/stylesheets/_bootstrap.scss bootstrap/stylesheets/bootstrap/_variables.scss assets/sass/
+
+# asdf
+mv assets/sass/_bootstrap.scss assets/sass/style.scss
+
+# Replace 1
+sed -i.bak "s:bootstrap/:../../bootstrap/stylesheets/bootstrap/:g" assets/sass/style.scss
+
+# Replace 2
+sed -i.bak 's&@import "../../bootstrap/stylesheets/bootstrap/variables";&@import "variables";&g' assets/sass/style.scss
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # THE END
-echo $NAME Bootstrap sub-theme created..
+echo Bootstrap sub-theme [$NAME] created..
 exit 0
