@@ -40,7 +40,7 @@ $ sudo gem install --no-ri --no-rdoc compass
 * Make sure scripts are executable: `$ chmod +x build-boostrap-sass.sh get-tag.awk`
 * Run `./build-boostrap-sass.sh`
 * Pass your human readable sub-theme name
-* Wait when everything will build..
+* **Wait until build finish..**
 * Then `cd ../YOUR_THEME` and run `npm install`, this will install grunt dependencies
 * Finally enable your custom sub-theme eather via UI or drush (`drush en -y YOUR_THEME`)
 * Congratulations!
@@ -51,3 +51,6 @@ $ sudo gem install --no-ri --no-rdoc compass
 * Start editing `sites/all/themes/<YOUR_THEME>/assets/sass/style.scss`. Put your custom sass on the end of the file. On save all styles will be rebuilded automatically. Reload your page, you should see changes.
 
 Rest of tasks can be seen via `$ grunt -h`. Check [blog](http://www.webfoobar.com/node/9) for more details.
+
+Comments/suggestions welcome.
+
