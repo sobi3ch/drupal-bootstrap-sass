@@ -88,7 +88,7 @@ rm assets/sass/style.scss.bak
 # Prepare grunt package file
 echo "Prepare grunt package file.."
 cp $BBS_DIR/grunt.package.json package.json
-sed -i.bak "s/#NAME#/$HUMANNAME/g" package.json
+sed -i.bak "s/#NAME#/$MACHINENAME/g" package.json
 rm package.json.bak
 
 # Prepapre config.rb for COMPASS
