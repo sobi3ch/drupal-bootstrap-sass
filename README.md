@@ -38,4 +38,7 @@ $ sudo gem install --no-ri --no-rdoc compass
 
 ### Usage
 
-Inside your theme run `$ grunt`. Rest of tasks can be seen via `$ grunt -h`. Check [blog](http://www.webfoobar.com/node/9) for details.
+* Inside your theme run `$ grunt`. This will start watching your Sass files. 
+* Start editing `sites/all/themes/<YOUR_THEME>/assets/sass/style.scss`. Put your custom sass on the end of the file. On save all styles will be rebuilded automatically. Reload your page, you should see changes.
+
+Rest of tasks can be seen via `$ grunt -h`. Check [blog](http://www.webfoobar.com/node/9) for more details.
