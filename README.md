@@ -2,7 +2,7 @@
 
 Using SASS in [Drupal Bootstrap theme](https://www.drupal.org/project/bootstrap). Based on blog *[Using SASS in Bootstrap Drupal theme](http://www.webfoobar.com/node/9)*. Without last section **Imagemin**.
 
-Purpose of this script is to repeat all step in above blog to create drupal theme based on bootstrap theme with all changes necessary to work with SASS/Compass.
+Purpose of this script is to repeat all step in above blog to create drupal theme based on bootstrap theme with all changes necessary to work with SASS/Compass and Grunt.
 
 Tested on Ubuntu 14.04. 
 
@@ -12,7 +12,12 @@ Tested on Ubuntu 14.04.
 
 Before you start make sure you have necessary tools.
 ```
-$ sudo apt-get install -y ruby ruby-dev nodejs npm
+$ sudo apt-get install -y build-essential wget ruby ruby-dev nodejs npm
+```
+
+Also you should have `awk` and `sed` alredy installed. Check with
+```
+$ type awk sed
 ```
 
 Install [Grunt](http://gruntjs.com/) globally
@@ -27,14 +32,18 @@ $ sudo gem install --no-ri --no-rdoc compass
 
 ### Installatioin
 
-* Clone this repo inside your `<drupaldir>/sites/all/themes`.
+* Prepare your Drupal page as alwyas if you didn't done this already
+* Download and unpack [Bootstrap](https://www.drupal.org/project/bootstrap) theme (`drush dl -y bootstrap`)
+* Clone this repo inside your main `themes/` directory (`<drupaldir>/sites/all/themes`)
+    * `$ git clone git@github.com:sobi3ch/drupal-bootstrap-sass.git`
 * `cd` to it
-* Make sure script is executable: `$ chmod +x build-boostrap-sass.sh`
+* Make sure scripts are executable: `$ chmod +x build-boostrap-sass.sh get-tag.awk`
 * Run `./build-boostrap-sass.sh`
 * Pass your human readable sub-theme name
 * Wait when everything will build..
 * Then `cd ../YOUR_THEME` and run `npm install`, this will install grunt dependencies
-* sudo gem install --no-ri --no-rdoc compass
+* Finally enable your custom sub-theme eather via UI or drush (`drush en -y YOUR_THEME`)
+* Congratulations!
 
 ### Usage
 
