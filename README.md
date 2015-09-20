@@ -30,9 +30,9 @@ Install [Compass](http://compass-style.org/)
 $ sudo gem install --no-ri --no-rdoc compass
 ```
 
-### Installatioin
+### Installation
 
-* Prepare your Drupal page as alwyas if you didn't done this already
+* Prepare your Drupal page as always if you didn't done this already
 * Download and unpack [Bootstrap](https://www.drupal.org/project/bootstrap) theme (`drush dl -y bootstrap`)
 * Clone this repo inside your main `themes/` directory (`<drupaldir>/sites/all/themes`)
     * `$ git clone git@github.com:sobi3ch/drupal-bootstrap-sass.git`
