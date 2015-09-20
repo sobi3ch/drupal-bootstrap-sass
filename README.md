@@ -34,22 +34,23 @@ $ sudo gem install --no-ri --no-rdoc compass
 * Prepare your Drupal page as always if you didn't done this already
 * Download and unpack [Bootstrap](https://www.drupal.org/project/bootstrap) theme (`drush dl -y bootstrap`)
 * Clone this repo inside your main `themes/` directory (`<drupaldir>/sites/all/themes`)
+    * `$ cd <drupaldir>/sites/all/themes`  
     * `$ git clone git@github.com:sobi3ch/drupal-bootstrap-sass.git`
-* `cd` to it
+* `cd` to it (`$ cd drupal-bootstrap-sass`)
 * Make sure scripts are executable: `$ chmod +x build-boostrap-sass.sh get-tag.awk`
 * Run `./build-boostrap-sass.sh`
-* Pass your human readable sub-theme name
+* Pass your human readable sub-theme name (`YOUR-CUSTOM-SUB-THEME`)
 * **Wait until build finish..**
-* Then `cd ../YOUR_THEME` and run `npm install`, this will install grunt dependencies
-* Finally enable your custom sub-theme eather via UI or drush (`drush en -y YOUR_THEME`)
+* Then `cd ../YOUR-CUSTOM-SUB-THEME` and run `npm install`, this will install grunt dependencies
+* Finally enable your custom sub-theme eather via UI or drush (`drush en -y YOUR-CUSTOM-SUB-THEME`)
 * Congratulations!
 
 ### Usage
 
 * Inside your theme run `$ grunt`. This will start watching your Sass files. 
-* Start editing `sites/all/themes/<YOUR_THEME>/assets/sass/style.scss`. Put your custom sass on the end of the file. On save all styles will be rebuilded automatically. Reload your page, you should see changes.
+* Start editing `sites/all/themes/<YOUR-CUSTOM-SUB-THEME>/assets/sass/style.scss`. Put your custom sass on the end of the file. Each time you safe `style.scss`, all styles will be rebuilded automatically. Reload your page, and check your changes.
 
-Rest of tasks can be seen via `$ grunt -h`. Check [blog](http://www.webfoobar.com/node/9) for more details.
+Rest of grunt tasks can be seen via `$ grunt -h`. Check [blog](http://www.webfoobar.com/node/9) for more details.
 
 Comments/suggestions welcome.
 
