@@ -6,7 +6,6 @@ Purpose of this script is to repeat all step in above blog to create drupal them
 
 Tested on Ubuntu 14.04. 
 
-## Installation
 
 ### Requirements
 
