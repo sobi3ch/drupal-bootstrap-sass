@@ -1,3 +1,5 @@
+> Currently script working only for [`7.x-3.0`](https://www.drupal.org/node/2137547)! There is an issue for this bug. If you want to support project please fill free to make fork and then pull-request.
+
 # Drupal Bootstrap SASS
 
 Using SASS in [Drupal Bootstrap theme](https://www.drupal.org/project/bootstrap). Based on blog *[Using SASS in Bootstrap Drupal theme](http://www.webfoobar.com/node/9)*. Without last section **Imagemin**.
