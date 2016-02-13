@@ -38,7 +38,7 @@ $ sudo gem install --no-ri --no-rdoc compass
     * Current script working only with version 3.0 so use `drush dl -y bootstrap-7.x-3.0`
 * Clone this repo inside your main `themes/` directory (`<drupaldir>/sites/all/themes`)
     * `$ cd <drupaldir>/sites/all/themes`  
-    * `$ git clone git@github.com:sobi3ch/drupal-bootstrap-sass.git`
+    * `$ git clone https://github.com/sobi3ch/drupal-bootstrap-sass.git`
 * `cd` to it (`$ cd drupal-bootstrap-sass`)
 * Make sure scripts are executable: `$ chmod +x build-boostrap-sass.sh get-tag.awk`
 * Run `./build-boostrap-sass.sh`
