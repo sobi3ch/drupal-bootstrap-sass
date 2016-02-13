@@ -35,6 +35,7 @@ $ sudo gem install --no-ri --no-rdoc compass
 
 * Prepare your Drupal page as always if you didn't done this already
 * Download and unpack [Bootstrap](https://www.drupal.org/project/bootstrap) theme (`drush dl -y bootstrap`)
+    * Current script working only with version 3.0 so use `drush dl -y bootstrap-7.x-3.0`
 * Clone this repo inside your main `themes/` directory (`<drupaldir>/sites/all/themes`)
     * `$ cd <drupaldir>/sites/all/themes`  
     * `$ git clone git@github.com:sobi3ch/drupal-bootstrap-sass.git`
