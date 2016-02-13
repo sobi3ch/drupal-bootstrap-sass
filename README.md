@@ -45,7 +45,9 @@ $ sudo gem install --no-ri --no-rdoc compass
 * Pass your human readable sub-theme name (`YOUR-CUSTOM-SUB-THEME`)
 * **Wait until build finish..**
 * Then `cd ../YOUR-CUSTOM-SUB-THEME` and run `npm install` (if you have errors like EACCESS then try run command with root privileges `sudo npm install`), this will install grunt dependencies.
-* Finally enable your custom sub-theme eather via UI or drush (`drush en -y YOUR-CUSTOM-SUB-THEME`)
+* Finally enable your custom sub-theme eather via UI or drush (
+    * `drush en -y YOUR-CUSTOM-SUB-THEME`
+    * `drush vset theme_default YOUR-CUSTOM-SUB-THEME`
 * Congratulations!
 
 ### Usage
